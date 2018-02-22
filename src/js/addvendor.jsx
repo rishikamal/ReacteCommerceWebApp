@@ -82,7 +82,7 @@ export default class AddVendor extends React.Component{
 					<input className="form-control inputForm" type="text" id="name" ref="name" placeholder="Vendor Name" required />
 					<input className="form-control inputForm" type="text" id="companyName" ref="companyName" placeholder="Company Name" required />
 					<input className="form-control inputForm" type="text" id="address" ref="address" placeholder="Company Address" required />
-					<button className="btn btn-primary inputForm" type="Submit" value="Submit">Add Vendor</button> 
+					<button className="form-control btn btn-primary inputForm" type="Submit" value="Submit">Add Vendor</button> 
 				</form>
 			</div>
 			</div>

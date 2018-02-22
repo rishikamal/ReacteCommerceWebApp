@@ -91,7 +91,7 @@ export default class DeleteCategory extends React.Component{
 						<option value="" disabled hidden>Select Category</option>
 						{categories}
 					</select>
-					<button className="btn btn-primary inputForm" type="Submit" value="Submit">Delete Category</button>
+					<button className="form-control btn btn-primary inputForm" type="Submit" value="Submit">Delete Category</button>
 				</form>
 			</div>
 			</div>

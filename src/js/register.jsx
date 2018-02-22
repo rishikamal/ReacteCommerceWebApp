@@ -81,7 +81,7 @@ export default class Registration extends React.Component{
 							<input type="text" className="form-control inputForm" id="addr" ref="addr" placeholder="Address" required/>
 							<input type="password" className="form-control inputForm" id="pass" ref="pass" placeholder="Password" required/>
 							<input type="password" className="form-control inputForm" id="cnf_pass" ref="cnf_pass" placeholder= "Re-Type Password" required/>
-							<button type="submit" className="btn btn-large btn-primary inputForm" value="Submit">Submit</button>
+							<button type="submit" className="form-control btn btn-large btn-primary inputForm" value="Submit">Submit</button>
 						</form>
 					</div>
 				</div>

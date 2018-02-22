@@ -177,7 +177,7 @@ export default class UpdateProduct extends React.Component{
 								{vendorsList}
 							</select>
 						</div>
-						<button type="submit" className="btn btn-primary inputForm" value="submit">Update</button>
+						<button type="submit" className="form-control btn btn-primary inputForm" value="submit">Update</button>
 					</form>
 				</div>
 				</div>

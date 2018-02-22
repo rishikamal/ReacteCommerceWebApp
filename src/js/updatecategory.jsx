@@ -131,7 +131,7 @@ export default class AddCategory extends React.Component{
 							<input className="inputForm form-control" value={this.state.catName} onChange={this.handlenewName.bind(this)} type="text" id="newName"  required />
 							<input className="inputForm form-control" value={this.state.catDetail} onChange={this.handlenewDetail.bind(this)} type="text" id="newDetail" required />						
 						</div>
-						<button className="btn btn-primary inputForm" type="Submit" value="Submit">Update Category</button> 
+						<button className="form-control btn btn-primary inputForm" type="Submit" value="Submit">Update Category</button> 
 					</form>
 				</div>
 				</div>

@@ -82,7 +82,7 @@ export default class Login extends React.Component{
 					<form className="col-md-4" action="" method="POST" onSubmit={this.handleLogin}>
 							<input className="form-control inputForm" type="text" ref="username" id="username" placeholder="Username" required/>
 							<input className="form-control inputForm" type="password" ref="pass" id="pass" placeholder="Password" required/>
-							<button type="submit" className="btn btn-primary inputForm" value="Login">Login</button>
+							<button type="submit" className="form-control btn btn-primary inputForm" value="Login">Login</button>
 					</form>
 				</div>
 			</div>

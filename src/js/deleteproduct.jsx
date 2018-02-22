@@ -86,7 +86,7 @@ export default class DeleteProduct extends React.Component{
 						<option disabled hidden selected>Select Product</option>
 						{products}
 					</select>
-					<button className="btn btn-primary inputForm" type="Submit" value="Submit">Delete</button>
+					<button className="form-control btn btn-primary inputForm" type="Submit" value="Submit">Delete</button>
 				</form>
 			</div>
 			</div>

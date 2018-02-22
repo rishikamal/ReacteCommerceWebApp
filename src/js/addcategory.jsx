@@ -80,7 +80,7 @@ export default class AddCategory extends React.Component{
 				<form className="col-md-4" onSubmit={this.submitForm} action="" method="POST">
 					<input className="fgroup form-control inputForm" type="text" id="name" ref="name" placeholder="Category Name" required />
 					<input className="fgroup form-control inputForm" type="text" id="detail" ref="detail" placeholder="Category Detail" required />
-					<button className="btn btn-primary inputForm" type="Submit" value="Submit">Add Category</button> 
+					<button className="form-control btn btn-primary inputForm" type="Submit" value="Submit">Add Category</button> 
 				</form>
 			</div>
 			</div>

@@ -84,7 +84,7 @@ export default class DeleteVendor extends React.Component{
 						<option disabled hidden value="">Select Vendor</option>
 						{vendors}
 					</select>
-					<button className="btn btn-primary inputForm" type="Submit" value="Submit">Delete Vendor</button>
+					<button className=" form-control btn btn-primary inputForm" type="Submit" value="Submit">Delete Vendor</button>
 				</form>
 			</div>
 			</div>

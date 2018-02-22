@@ -121,7 +121,7 @@ export default class UpdateVendor extends React.Component{
 						<input type="text" className="form-control inputForm" value={this.state.vendName} onChange={this.nameChange.bind(this)} id="newVendorName" ref="newVendorName" required/>
 						<input type="text" className="form-control inputForm" value={this.state.compName} onChange={this.compChange.bind(this)} id="newCompanyName" ref="newCompanyName" required/>
 						<input type="text" className="form-control inputForm" value={this.state.address} onChange={this.addressChange.bind(this)} id="newAddress" ref="newAddress" required/>
-						<button type="submit" className="btn btn-primary inputForm" value="submit">Update</button>
+						<button type="submit" className="form-control btn btn-primary inputForm" value="submit">Update</button>
 					</form>
 				</div>
 				</div>

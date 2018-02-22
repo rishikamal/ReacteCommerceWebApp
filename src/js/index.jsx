@@ -16,6 +16,8 @@ import DeleteVendor from "./deletevendor"
 import AddCategory from "./addcategory"
 import UpdateCategory from "./updatecategory"
 import DeleteCategory from "./deletecategory"
+import AddProductModel from "./addproductmodel"
+import AddBrand from "./addbrand"
 
 ReactDOM.render(<Router>
 					<div>
@@ -32,7 +34,9 @@ ReactDOM.render(<Router>
 					<Route path="/deletevendor" component={localStorage['isAdmin']== 'true' ? DeleteVendor : Lost} />
 					<Route path="/addcategory" component={localStorage['isAdmin']== 'true' ? AddCategory : Lost } />
 					<Route path="/updatecategory" component={localStorage['isAdmin']== 'true' ? UpdateCategory : Lost} />
-					<Route path="/deletecategory" component={localStorage['isAdmin']== 'true' ? DeleteCategory : Lost} />					
+					<Route path="/deletecategory" component={localStorage['isAdmin']== 'true' ? DeleteCategory : Lost} />
+					<Route path="/addproductmodel" component={localStorage['isAdmin']== 'true' ? AddProductModel : Lost} />	
+					<Route path="/addbrand" component={localStorage['isAdmin']== 'true' ? AddBrand : Lost} />					
 					</div>
 				</Router>, 
 				document.getElementById("root"));

@@ -143,7 +143,7 @@ export default class AddProduct extends React.Component{
 								<option disabled selected hidden>Select Vendor</option>
 								{vendors}
 							</select>
-						<button className="form-control inputForm" type="submit" value="submit" className="btn btn-primary">Add Product</button>
+						<button className="form-control form-control inputForm btn btn-primary" type="submit" value="submit">Add Product</button>
 					</form>
 				</div>
 			</div>
