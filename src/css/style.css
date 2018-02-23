@@ -16,6 +16,16 @@ padding-left: 30px;
 }
 
 .header-container{
-	height: 50px;
+	height: 80px;
 	background-color:  #393939;
+}
+
+.login-register h4{
+	float: left;
+	color: white;
+	padding: 5px;
+}
+
+.login-register{
+	margin: 15px 20px 20px 20px;
 }

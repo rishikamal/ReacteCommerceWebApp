@@ -25,16 +25,11 @@ export default class Home extends React.Component{
 			var navBar= "";
 			var logoutbtn="";
 			if(!localStorage['token']){
-				navBar= <div className="col-md-3 col-sm-3 col-lg-3 navBar">
-							<h4><Link to="/login">Login</Link></h4>
-							<h4><Link to="/register">Register</Link></h4>
-						</div>
+				navBar= <UserControls />
 			}
 			else{
 				if(localStorage['isAdmin']== 'true')
 					navBar = <AdminControls />
-				else
-					navBar = <UserControls />
 
 				logoutbtn = <div className="col-md-2">
 								<button className="btn btn-small btn-info logoutBtn" onClick={this.logout.bind(this)}>Logout</button>

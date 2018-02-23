@@ -68,6 +68,11 @@ export default class AddCategory extends React.Component{
 		$("#ErrorMsg").text(msg);
 	}
 
+	logout(event){
+		localStorage.clear();
+		this.props.history.push("/")
+	}
+
 	render(){
 		return(
 			<div>
@@ -75,7 +80,12 @@ export default class AddCategory extends React.Component{
 			<div className="row container">
 			<AdminControls />
 			<div className="col-md-9 col-sm-9 col-lg-9">
-				<h3>Add Category</h3>
+			<div className= "row">
+					<h3 className="col-md-9">Add Category</h3>
+					<div className="col-md-2">
+						<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
+					</div>
+				</div>
 				<label id="ErrorMsg"></label>
 				<form className="col-md-4" onSubmit={this.submitForm} action="" method="POST">
 					<input className="fgroup form-control inputForm" type="text" id="name" ref="name" placeholder="Category Name" required />

@@ -120,6 +120,11 @@ export default class UpdateProduct extends React.Component{
 			$("#inputControls").show();
 		})
 	}
+
+	logout(event){
+		localStorage.clear();
+		this.props.history.push("/")
+	}
 			
 	render(){
 		var products="";
@@ -161,7 +166,12 @@ export default class UpdateProduct extends React.Component{
 				<div className="row container">
 				<AdminControls />
 				<div className="col-md-9 col-sm-9 col-lg-9">
-				<h3>Update Product</h3>
+				<div className= "row">
+					<h3 className="col-md-9">Update Product</h3>
+					<div className="col-md-2">
+						<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
+					</div>
+				</div>
 				<label id="productError"></label>
 					<form onSubmit={this.handleSubmit} className="col-md-4" action="" method="PUT">
 						<select className="form-control inputForm" defaultValue={this.state.productid} id="productName" ref="productName" onChange={this.handlenewproducts} required >

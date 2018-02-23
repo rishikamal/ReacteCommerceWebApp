@@ -93,6 +93,11 @@ export default class UpdateVendor extends React.Component{
 	addressChange(event){
 		this.setState({address: event.target.value})
 	}
+
+	logout(event){
+		localStorage.clear();
+		this.props.history.push("/")
+	}
 			
 	render(){
 		var vendors= "";
@@ -111,7 +116,12 @@ export default class UpdateVendor extends React.Component{
 				<div className="row container">
 				<AdminControls />
 				<div className="col-md-9 col-sm-9 col-lg-9">
-				<h3>Update Vendor</h3>
+				<div className= "row">
+					<h3 className="col-md-9">Update Vendor</h3>
+					<div className="col-md-2">
+						<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
+					</div>
+				</div>
 				<label id="vendorError"></label>
 					<form onSubmit={this.handleSubmit} className="col-md-4" action="" method="PUT">
 						<select className="form-control inputForm" defaultValue={this.state.vendorid} id="vendorName" ref="vendorName" onChange={this.handelNewVendor} required >

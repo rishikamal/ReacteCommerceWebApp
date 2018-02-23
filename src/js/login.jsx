@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import { BrowserRouter as Router, Route, Link, Redirect  } from "react-router-dom";
 import Header from './header'
+import UserControls from "./usercontrols"
 
 export default class Login extends React.Component{
 	constructor(props){
@@ -72,10 +73,7 @@ export default class Login extends React.Component{
 			<div>
 			<Header />
 			<div className="row container">
-				<div className="col-md-3 col-sm-3 col-lg-3 navBar">
-					<h4><Link to="/">Home</Link></h4>
-					<h4><Link to="/register">Register</Link></h4>
-				</div>
+					<UserControls />
 				<div className="col-md-9 col-sm-9 col-lg-9">
 					<h3>Login</h3>
 					<label id="loginError"></label>

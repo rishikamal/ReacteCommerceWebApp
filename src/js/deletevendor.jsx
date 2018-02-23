@@ -61,6 +61,11 @@ export default class DeleteVendor extends React.Component{
 		$("#deleteMessage").text(msg);
 	}
 
+	logout(event){
+		localStorage.clear();
+		this.props.history.push("/")
+	}
+
 	render(){
 		var vendors = "";
 		if(this.state.vendorList){
@@ -77,7 +82,12 @@ export default class DeleteVendor extends React.Component{
 			<div className="row container">
 			<AdminControls />
 			<div className="col-md-9 col-sm-9 col-lg-9">
-			<h3>Delete Vendor</h3>
+			<div className= "row">
+					<h3 className="col-md-9">Delete Vendor</h3>
+					<div className="col-md-2">
+						<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
+					</div>
+				</div>
 				<label id="deleteMessage"></label>
 				<form className="col-md-4" onSubmit={this.handleFormSubmit} action="" method="DELETE">
 					<select defaultValue="" ref="vendorValue" id="vendorValue" className="form-control inputForm" required>

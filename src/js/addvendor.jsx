@@ -69,6 +69,11 @@ export default class AddVendor extends React.Component{
 		$("#ErrorMsg").text(msg);
 	}
 
+	logout(event){
+		localStorage.clear();
+		this.props.history.push("/")
+	}
+
 	render(){
 		return(
 			<div>
@@ -76,7 +81,12 @@ export default class AddVendor extends React.Component{
 			<div className="row container">
 			<AdminControls />
 			<div className="col-md-9 col-sm-9 col-lg-9">
-			<h3>Add Vendor</h3>
+			<div className= "row">
+					<h3 className="col-md-9">Add Vendor</h3>
+					<div className="col-md-2">
+						<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
+					</div>
+				</div>
 				<label id="ErrorMsg"></label>
 				<form className="col-md-4" onSubmit={this.submitForm} action="" method="POST">
 					<input className="form-control inputForm" type="text" id="name" ref="name" placeholder="Vendor Name" required />

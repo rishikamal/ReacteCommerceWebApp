@@ -106,6 +106,12 @@ export default class AddProductModel extends React.Component{
 		})
 	}
 
+	logout(event){
+		localStorage.clear();
+		this.props.history.push("/")
+	}
+
+
 	render(){
 
 		var catList="";
@@ -142,7 +148,12 @@ export default class AddProductModel extends React.Component{
 				<div className= "row container">
 				<AdminControls />
 				<div className="col-md-9 col-sm-9 col-lg-9">
-				<h3>Add Product Model</h3>
+				<div className= "row">
+					<h3 className="col-md-9">Add Product Model</h3>
+					<div className="col-md-2">
+						<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
+					</div>
+				</div>
 					<label id="productError"></label>
 					<form className="col-md-4" method="POST" action="" onSubmit={this.handleSubmit}>
 						<input className="form-control inputForm" type="text" ref="name" id="name" placeholder="Name" required/>
