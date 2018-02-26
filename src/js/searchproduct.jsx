@@ -30,7 +30,6 @@ export default class SearchProdut extends React.Component{
 		}).done((res)=>{
 			this.setState({productList: res})
 		}).fail((err)=>{
-			console.log(err)
 			this.handleProductError("Error: "+err)
 		})
 	}
@@ -40,45 +39,60 @@ export default class SearchProdut extends React.Component{
 	}
 
 	handleProductError(msg){
-		$("$errorMsg").text(msg);
+		$("#errorMsg").text(msg);
 	}
 
 	render(){
 
 		const rows = [];
-		var prevCategory = null;
-		var catName = null;
-		this.state.productList.filter(function(product, index){
-			if(product.name.indexOf(this.state.searchText) > -1)
-				rows.push(
-						<tr>
-					        <td>{product.name}</td>
-					        <td>{product.id}</td>
-					     </tr>
+		var prevCategory = "";
+		if(this.state.searchText){
+			
+			this.state.productList.filter(function(product, index){
+				if((product.name.toLowerCase()).indexOf(this.state.searchText.toLowerCase()) > -1){
+
+					var vendor= [];
+					
+					// product.vendors.map(function(vend, index){
+					// 	vendor.push(`${vend.name}<\br>`)
+					// })
+					if(product.category.name !== prevCategory)
+					rows.push(
+							<tr>
+						        <th colSpan="2">
+						          {product.category.name}
+						        </th>
+						    </tr>
+						)
+
+					rows.push(
+							<tr>
+						        <td>{product.name}</td>
+						        <td>{product.id}</td>
+						        <td>{vendor}</td>
+						     </tr>
 					)
-			if(product.category.name != prevCategory)
-				rows.push(
-						<tr>
-					        <th colSpan="2">
-					          {catName}
-					        </th>
-					    </tr>
-					)
-			catName = product.category.name;
-		})
+						
+				prevCategory = product.category.name;
+				}	
+
+			}, this)
+
+		}		
 
 		return(
-			<div>
+			<div className="col-md-10" style={{'margin' : '20px'}}>
 			<label id="errorMsg"></label>
-				<form className="">
+				<form style={{'margin' : '20px 20px 20px 0px'}}>
 					<input type="text" value={this.state.searchText} onChange={this.handleSearchText} className="form-control formInput searchBar" placeholder="Search Prouct" />
 				</form>
 
-				<table>
+				<table className=" table-hover searchTable">
 			        <thead>
 			          <tr>
 			            <th>Name</th>
 			            <th>ID</th>
+			            <th>Vendors</th>
 			          </tr>
 			        </thead>
 			        <tbody>

@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import Header from './header'
 import AdminControls from './admincontrols';
 import UserControls from './usercontrols'
+import SearchProduct from './searchproduct'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default class Home extends React.Component{
 
 	constructor(props){
 		super(props);
+		this.logout = this.logout.bind(this);
 	}
 
 	componentDidMount(){
@@ -32,7 +34,7 @@ export default class Home extends React.Component{
 					navBar = <AdminControls />
 
 				logoutbtn = <div className="col-md-2">
-								<button className="btn btn-small btn-info logoutBtn" onClick={this.logout.bind(this)}>Logout</button>
+								<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
 							</div>
 			}
 
@@ -46,6 +48,8 @@ export default class Home extends React.Component{
 						<h3 className="col-md-9">Welcome Home</h3>
 						{logoutbtn}
 					</div>
+
+					<SearchProduct />
 		
 				</div>
 				</div>

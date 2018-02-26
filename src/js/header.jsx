@@ -23,7 +23,7 @@ export default class Header extends React.Component{
 							<h4><Link to="/register">Register</Link></h4>
 						</div>
 		else
-			logout = <button className="btn btn-small btn-info logoutBtn">Logout</button>
+			logoutbtn = <button className="btn btn-small btn-info logoutBtn pull-right login-register">Logout</button>
 		return(
 			<div className="header-container">
 				{login}

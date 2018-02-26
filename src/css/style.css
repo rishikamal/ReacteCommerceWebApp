@@ -29,3 +29,12 @@ padding-left: 30px;
 .login-register{
 	margin: 15px 20px 20px 20px;
 }
+
+.searchTable td,  th {
+	width: 100px;
+	height: 30px;
+}
+
+.searchTable tbody th {
+	background-color: #f9f9f9;
+}
