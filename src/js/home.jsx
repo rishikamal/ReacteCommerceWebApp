@@ -10,7 +10,6 @@ export default class Home extends React.Component{
 
 	constructor(props){
 		super(props);
-		this.logout = this.logout.bind(this);
 	}
 
 	componentDidMount(){
@@ -18,24 +17,14 @@ export default class Home extends React.Component{
 			this.props.history.push('/')
 	}
 
-	logout(event){
-		localStorage.clear();
-		this.props.history.push("/")
-	}
-
 	render(){
 			var navBar= "";
-			var logoutbtn="";
 			if(!localStorage['token']){
 				navBar= <UserControls />
 			}
 			else{
 				if(localStorage['isAdmin']== 'true')
 					navBar = <AdminControls />
-
-				logoutbtn = <div className="col-md-2">
-								<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
-							</div>
 			}
 
 		return (
@@ -46,7 +35,6 @@ export default class Home extends React.Component{
 					<div className="col-md-9 col-sm-9 col-lg-9">
 					<div className= "row">
 						<h3 className="col-md-9">Welcome Home</h3>
-						{logoutbtn}
 					</div>
 
 					<SearchProduct />

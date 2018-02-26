@@ -106,12 +106,6 @@ export default class AddProductModel extends React.Component{
 		})
 	}
 
-	logout(event){
-		localStorage.clear();
-		this.props.history.push("/")
-	}
-
-
 	render(){
 
 		var catList="";
@@ -151,7 +145,7 @@ export default class AddProductModel extends React.Component{
 				<div className= "row">
 					<h3 className="col-md-9">Add Product Model</h3>
 					<div className="col-md-2">
-						<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
+
 					</div>
 				</div>
 					<label id="productError"></label>

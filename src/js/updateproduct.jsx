@@ -120,12 +120,7 @@ export default class UpdateProduct extends React.Component{
 			$("#inputControls").show();
 		})
 	}
-
-	logout(event){
-		localStorage.clear();
-		this.props.history.push("/")
-	}
-			
+		
 	render(){
 		var products="";
 		var categories = "";
@@ -169,7 +164,7 @@ export default class UpdateProduct extends React.Component{
 				<div className= "row">
 					<h3 className="col-md-9">Update Product</h3>
 					<div className="col-md-2">
-						<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
+
 					</div>
 				</div>
 				<label id="productError"></label>

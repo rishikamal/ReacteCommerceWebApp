@@ -11,7 +11,7 @@ export default class Header extends React.Component{
 
 	logout(){
 		localStorage.clear();
-		this.props.history.push("/")
+		window.open("/", "_SELF")
 	}
 
 	render(){
@@ -23,7 +23,7 @@ export default class Header extends React.Component{
 							<h4><Link to="/register">Register</Link></h4>
 						</div>
 		else
-			logoutbtn = <button className="btn btn-small btn-info logoutBtn pull-right login-register">Logout</button>
+			logoutbtn = <button className="btn btn-small btn-info logoutBtn pull-right login-register" onClick={this.logout}>Logout</button>
 		return(
 			<div className="header-container">
 				{login}

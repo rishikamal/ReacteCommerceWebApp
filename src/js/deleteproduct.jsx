@@ -63,11 +63,6 @@ export default class DeleteProduct extends React.Component{
 		$("#deleteMessage").text(msg);
 	}
 
-	logout(event){
-		localStorage.clear();
-		this.props.history.push("/")
-	}
-
 	render(){
 		var products = "";
 		if(this.state.productList){
@@ -87,7 +82,7 @@ export default class DeleteProduct extends React.Component{
 			<div className= "row">
 					<h3 className="col-md-9">Delete Product</h3>
 					<div className="col-md-2">
-						<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
+
 					</div>
 				</div>
 				<label id="deleteMessage"></label>

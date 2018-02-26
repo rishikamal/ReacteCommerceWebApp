@@ -18,7 +18,7 @@ export default class Login extends React.Component{
 
 	componentDidMount(){
 		if(localStorage['token']){
-			this.props.history.push('/dashboard')
+			window.open("/dashboard", "_SELF")
 		}	
 	}
 
@@ -26,7 +26,7 @@ export default class Login extends React.Component{
 		event.preventDefault();
 		if(localStorage['token']){
 			this.handleLoginError("User Already Logged In. Redirecting...")
-			this.props.history.push('/dashboard')
+			window.open("/dashboard", "_SELF")
 			
 		}
 		else{
@@ -51,7 +51,7 @@ export default class Login extends React.Component{
 				this.setState({userData : res}, function(){
 					localStorage['token'] = res.Token;
 					localStorage['isAdmin'] = res.data.is_superuser;
-					this.props.history.push('/dashboard')
+					window.open("/dashboard", "_SELF")
 				})
 
 			else{

@@ -69,11 +69,6 @@ export default class AddVendor extends React.Component{
 		$("#ErrorMsg").text(msg);
 	}
 
-	logout(event){
-		localStorage.clear();
-		this.props.history.push("/")
-	}
-
 	render(){
 		return(
 			<div>
@@ -84,7 +79,7 @@ export default class AddVendor extends React.Component{
 			<div className= "row">
 					<h3 className="col-md-9">Add Vendor</h3>
 					<div className="col-md-2">
-						<button className="btn btn-small btn-info logoutBtn" onClick={this.logout}>Logout</button>
+
 					</div>
 				</div>
 				<label id="ErrorMsg"></label>
