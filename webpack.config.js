@@ -17,8 +17,12 @@ var config = {
 
 	resolve: {
    		modules: ['node_modules'],
-   		extensions: ['.js', '.jsx']
- 	},
+   		extensions: ['.js', '.jsx'],
+   		// alias: {
+	    //   	"jquery-ui": "jquery-ui/jquery-ui.js",
+	    //   	modules : path.resolve(__dirname, 'node_modules/jquery-ui/ui')
+     //  	}  
+     },
 	
 	module : {
 		loaders : [
@@ -27,11 +31,20 @@ var config = {
 				include : APP_DIR,
 				loader : 'babel-loader',
 				query: {
-				presets: ['react', 'es2015']
+					presets: ['react', 'es2015']
 				}
 			}
 		]
-	}
+	},
+
+	plugins: [
+	    new webpack.ProvidePlugin({
+	      "$":"jquery",
+	      "jQuery":"jquery",
+	      "window.jQuery":"jquery",
+	      "window.$": "jquery"
+	    })
+    ]
 };
 
 module.exports = config;

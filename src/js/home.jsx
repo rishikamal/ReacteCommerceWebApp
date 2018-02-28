@@ -4,6 +4,7 @@ import Header from './header'
 import AdminControls from './admincontrols';
 import UserControls from './usercontrols'
 import SearchProduct from './searchproduct'
+import MySelect from './myselect'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default class Home extends React.Component{
@@ -37,11 +38,13 @@ export default class Home extends React.Component{
 						<h3 className="col-md-9">Welcome Home</h3>
 					</div>
 
+					
 					<SearchProduct />
-		
 				</div>
 				</div>
 			</div>
 			)
 	}
 }
+
+//<MySelect />
